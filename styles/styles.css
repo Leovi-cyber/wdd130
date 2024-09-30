@@ -29,8 +29,8 @@ margin:1rem ;
 text-align: center;
 border: 2px solid rgba(0, 0, 0, 0.2);
 padding: 2rem;
-background-color:darkblue ;
-color: blueviolet;
+background-color: aliceblue;
+color: rgb(240, 244, 246);
 }
 aside image {
     width: 200px;
