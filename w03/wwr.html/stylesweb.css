@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Rock+Salt&display=swap');
 
+
 :root {
-    --primary-color: #a1683a;
+    --primary-color: rgba(161, 104, 58);
     --secondary-color: #ffffff;
-    --accent1-color: #eae0d5;
+    --accent1-color: rgba(234, 224, 213);
     --accent2-color: #00e192;
     --header-font: "rock salt";
     --text-font: "questrial";
@@ -13,6 +14,7 @@
 body {
     background-color: var(--accent2-color);
     font-family: var(--text-font);
+    margin: 0%;
 }
 
 .logo {
@@ -36,16 +38,16 @@ header nav a {
 
 h1 {
     font-family: var(--header-font);
-    border: 2px solid;
     background-color: var(--accent1-color);
     text-align: center;
+    position: absolute;
+
 }
 
-.container {
-    position: relative
-}
-
-.middle_header {
+.about {
+    font-family: var(--header-font);
+    background-color: var(--accent1-color);
+    text-align: center;
     position: absolute;
     top: 10px;
     left: 50%;
@@ -53,10 +55,20 @@ h1 {
     z-index: 1;
     margin: 0;
     text-wrap: nowrap;
-    color: var(--secondary-color);
+    color: #000;
+    margin-bottom: 90px;
     font-size: 24px;
-    text-shadow: 2px 2px 5px #000;
+    
 }
+.letters {
+    font-family: var(--text-font);
+}
+
+.hero {
+    position: relative
+}
+
+
 
 .description {
     color: var(--secondary-color);
@@ -71,24 +83,24 @@ h1 {
     text-align: center;
 }
 
-.buttons {
+/*.buttons {
     position: absolute;
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
-}
+    z-index: 1; 
+} */
 
-.buttons button {
+/* .buttons button {
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
     border: none;
-    box-shadow: 2px 2px 5px #000;
-}
+    box-shadow: 2px 2px 5px #000; }*/
 
 .landscape {
     width: 100%;
+    object-fit: cover;
 }
 
 footer {
@@ -100,4 +112,5 @@ footer {
 
 .footer {
     font-weight: bold;
+    border-top: 1px solid;
 }
