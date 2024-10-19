@@ -66,6 +66,7 @@ h2 {
     z-index: 1;
     text-shadow: 2px 2px 5px #000;
     text-align: center;
+    top: 50%;
 }
  
 .hero {
@@ -100,6 +101,7 @@ h2 {
     display: flex;
     gap: 10px;
     margin-right: 20px;
+    text-decoration: none;
 }
  
 .adventure {
