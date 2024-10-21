@@ -22,7 +22,6 @@ body {
 header {
     background-color: var(--primary-color);
     display: flex;
-    padding-right: 10px 20px;
     align-items: center;
 }
 header img {
