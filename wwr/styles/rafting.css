@@ -5,17 +5,16 @@
 }
  
 :root {
-    --primary-color: rgba(161, 104, 58);
-    --secondary-color: rgba(255, 255, 255);
-    --accent1-color: rgba(234, 224, 213);
-    --accent2-color: rgba(0, 225, 146);
+    --primary-color: #00e192;
+    --secondary-color: #add8e6;
+    --accent1-color: #000;
     --header-font: "rock salt";
     --text-font: "questrial";
 }
  
 body {
     margin: 0;
-    background-color: var(--accent1-color);
+    background-color: var();
     padding: 5px;
 }
  
@@ -24,6 +23,7 @@ header {
     display: grid;
     align-items: center;
     grid-template-columns: 200px auto;
+    color: var(--accent1-color);
 }
 header img {
     height: auto;
@@ -45,11 +45,10 @@ header img {
 }
  
 h1 {
-    color: var(--secondary-color);
+    color: #000;
     font-family: var(--header-font);
     position: absolute;
-    text-shadow: 2px 2px 5px #000;
-    background-color: rgba(234, 224, 213, 0.8);
+    background-color: #add8e6;
     padding: 5px;
     top: 10px;
     left: 50%;
@@ -58,13 +57,14 @@ h1 {
  
 .history {
     text-align: center;
+    background-color: #add8e6;
+    font-size: bold;
 }
  
 h2 {
-    color: var(--secondary-color);
+    color: #000;
     font-family: var(--header-font);
     z-index: 1;
-    text-shadow: 2px 2px 5px #000;
     text-align: center;
     top: 50%;
 }
@@ -73,10 +73,11 @@ h2 {
     text-align: center;
     margin-top: 15px;
     position: relative;
+    background-color: var(--secondary-color);
 }
  
 .article {
-    background-color: var(--accent1-color);
+    background-color: #add8e6;
     font-family: var(--text-font);
     position: absolute;
     top: 160px;
@@ -84,6 +85,8 @@ h2 {
     transform: translateX(-50%);
     width: 70%;
     padding: 10px;
+    font-size: 19px;
+    
 }
  
 .article__img {
@@ -96,7 +99,28 @@ h2 {
     width: 100%;
     height: auto;
 }
- 
+
+.text-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text1, .text2 {
+    flex: 1;
+    margin: 0 10px;
+    font-size: 19px;
+    
+    
+}
+
+.text-image-container img {
+    width: 350px;
+    height: auto;
+}
+
+
+
 .social_media {
     justify-self: end;
     display: flex;
@@ -110,6 +134,7 @@ h2 {
     flex-direction: column;     /* Stack items vertically */
     align-items: center;        /* Center items horizontally */
     text-align: center; 
+    background-color:#add8e6
 }
  
 .adventure img {
@@ -128,6 +153,10 @@ h2 {
 .adventure h2 {
     margin-bottom: 20px;
 }
+
+figcaption {
+    font-size: 19px;
+}
  
 .footer {
     display: grid;  
@@ -140,6 +169,8 @@ h2 {
 .footer p {
     justify-self: end;
     margin: 0;
+    font-size: bold;
+    color: var(--accent1-color);
 }
  
 .footer__logo {
