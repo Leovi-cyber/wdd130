@@ -228,6 +228,9 @@ figcaption {
     padding: 10px;
     
 }
+.wireframe {
+    text-decoration: none;
+}
 
 .text_info {
     flex: 1;
