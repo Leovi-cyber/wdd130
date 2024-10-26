@@ -230,6 +230,7 @@ figcaption {
 }
 .wireframe {
     text-decoration: none;
+    color: #000;
 }
 
 .text_info {
