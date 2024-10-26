@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Leovi Lugo Rosado">
-    <link rel="stylesheet" href="./Styles/Poll-form.css">
+    <link rel="stylesheet" href="../week05/copypoll.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>WDD 130 | Html Form - User Poll</title>
 </head>
-<body>
-    <header>
+<body class="body_poll">
+    <header class="header">
         <h1>Information request</h1>
     </header>
     <main>
@@ -26,36 +26,29 @@
                     <label for="useremail">Useremail</label>
                     <input type="email" name="useremail" id="useremail">
                 </div>
+                <legend>What is your inquiry?</legend>
                 <div class="form-item column2">
-                    <input type="radio" name="inquiry_type" value="general_inquiry" id="general_inquiry">
                     <label for="general_inquiry">General Inquiry</label><br>
+                    <input type="radio" name="inquiry_type" value="general_inquiry" id="general_inquiry">
                     
-                    <input type="radio" name="inquiry_type" value="reservation_question" id="reservation_question">
                     <label for="reservation_question">Reservation Question</label><br>
+                    <input type="radio" name="inquiry_type" value="reservation_question" id="reservation_question">
                     
-                    <input type="radio" name="inquiry_type" value="website_suggestion" id="website_suggestion">
                     <label for="website_suggestion">Website Suggestion</label>
+                    <input type="radio" name="inquiry_type" value="website_suggestion" id="website_suggestion">
                 </div>
                 
             </fieldset>
             <fieldset>
-                <legend>Questions</legend>
-                <label for="browser">What is your favorite internet browser?</label>
+                <legend>Subscription and Message</legend>
                 <div class="column1">
-                    <select name="browser" id="browser">
-                        <option value="chrome">Chrome</option>
-                        <option value="firefox">Firefox</option>
-                        <option value="safari">Safari</option>
-                    </select>
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                    <input type="checkbox" name="subscribe" id="subscribe">
                 </div>
-                <div class="column1">
-                    <label for="pet">Do You have a household pet?</label>
-                    <input type="checkbox" name="pet" id="pet">
-                </div>
-                <label for="feedback">List the places you have lived</label>
-                <textarea name="feedback" id="feedback" rows="4" placeholder="Santo Domingo, Puerto Plata, Samana"></textarea>
+                <label for="Message">Message</label>
+                <textarea name="Message" id="message" rows="4" placeholder="I want to know about..."></textarea>
             </fieldset>
-            <button type="submit">Submit Poll</button>
+            <button type="submit">Submit Your Message</button>
         </form>
     </main>
     <footer>
