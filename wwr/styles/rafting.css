@@ -276,7 +276,7 @@ form {
     width: 650px;
     margin: 0 auto;
     padding: .5rem;
-    border: 10x solid rgba(0, 0, 0, 0.1);
+    border: 10px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
