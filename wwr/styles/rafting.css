@@ -73,11 +73,12 @@ header img {
 }
  
 h2, h1 {
-    color: var(--accent1-color);
+    color: var(--accent2-color);
     font-family: var(--header-font);
     z-index: 1;
     text-align: center;
     top: 50%;
+    background-color: var(--accent1-color);
 }
  
 .hero {
