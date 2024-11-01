@@ -461,3 +461,19 @@ input [type="email"] {
 .contact{
     background-color: gray;
 }
+
+.button-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button2 {
+    background-color: black; 
+    color: white; /
+    padding: 10px 20px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 
+
+}
