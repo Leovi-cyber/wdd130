@@ -477,3 +477,9 @@ input [type="email"] {
     transition: background-color 
 
 }
+
+.wireframe {
+    z-index: 3;
+    color: #000;
+    text-decoration: none;
+}
