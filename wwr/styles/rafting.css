@@ -50,17 +50,6 @@ header img {
     
 }
  
-.leo {
-    color: var(--accent1-color);
-    font-family: var(--header-font);
-    position: absolute;
-    background-color: var(--secondary-color);
-    padding: 5px;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid;
-}
  
 .history {
     justify-items: center;
@@ -102,6 +91,14 @@ h2, h1 {
     border: 1px solid;
     
 }
+
+.text_info, h3 {
+    color: white;
+}
+
+.info {
+    background-color: black;
+}
  
 .article__img {
     float: right;
@@ -119,6 +116,8 @@ h2, h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 80%;
+    overflow: hidden;
 }
 
 .text1, .text2 {
@@ -136,14 +135,7 @@ h2, h1 {
 
 
 
-.social_media {
-    justify-self: end;
-    display: flex;
-    gap: 10px;
-    margin-right: 20px;
-    text-decoration: none;
-}
- 
+
 .adventure {
     display: flex;              
     flex-direction: column;     /* Stack items vertically */
@@ -153,9 +145,9 @@ h2, h1 {
     border: 1px solid;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
+    
 }
- 
+
 .adventure img {
     width: 200px;
     height: 200px;
@@ -176,7 +168,14 @@ h2, h1 {
 figcaption {
     font-size: 19px;
 }
- 
+
+.social_media {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+}
 .footer {
     display: grid;  
     grid-template-columns: 1.5fr 1fr;
@@ -196,19 +195,20 @@ figcaption {
     width: 50px;
 }
 
-.top {
-    background-color: black;
-    color: #fff;
+.wireframe {
+    text-decoration: none;
+    color: #000;
 }
 
-.contact {
-    background-color: #D6D6D6;
-    color: #000;
+.top {
+    background-color: white ;
+    color: #fff;
 }
 
 .bold {
     font-weight: bold;
     font-size: 20px;
+    color: white;
 }
 
 .info_container {
@@ -228,10 +228,7 @@ figcaption {
     padding: 10px;
     
 }
-.wireframe {
-    text-decoration: none;
-    color: #000;
-}
+
 
 .text_info {
     flex: 1;
@@ -247,13 +244,6 @@ h3 {
     border: 1px solid black;
     padding: 10px;
 }
-
-.middle {
-    background-color: black;
-    color: white;
-}
-
-
 
 
 
@@ -283,6 +273,7 @@ form {
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
+    
 }
 
 fieldset {
@@ -302,7 +293,7 @@ legend {
 
 label, input, button, select, textarea {
     font-family: "roboto";
-
+    
 }
 
 label {
@@ -335,40 +326,138 @@ button:hover {
     background-color: darkgreen;
 }
 
+.container_background {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr; /* Single column for the background image */
+    position: relative; /* Position relative for absolute children */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.middle {
+    position: absolute; /* Position the background image absolutely */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Cover the entire area */
+    z-index: -1; /* Send to back */
+}
+
+.content {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr auto 1fr; /* Left image, form, right image */
+    align-items: start; /* Align items to the top */
+    gap: 20px; /* Space between items */
+    position: relative; /* For content positioning */
+    padding: 20px; /* Add padding */
+    z-index: 1; /* Bring content above the background image */
+}
+
+.left-image,
+.right-image {
+    max-width: 350px; /* Adjust size of images */
+    height: auto; 
+    border: 5px solid white;
+    margin-bottom: 10px;
+}
+
+figcaption {
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 3rem;
+    background-color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+figure {
+    display: flex; /* Use flexbox for figure layout */
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; 
+
+}
+
+.form {
+    display: flex; /* Ensure form items stack vertically */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-left: 10px;
+}
 
 .form-item {
     display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-
+    margin: .5rem 0;
 }
 
-.column1 {
-    grid-template-columns: 3fr;
-    margin: 0.5rem 0;
+input [type="text"],
+input [type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
 }
 
-.column2 {
-    grid-template-columns: 1fr 2fr 1fr;
+.form-container{
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1rem; /* Space between the form and the button */
+    width: 100%; /
+    
 }
 
-
-
-.form-item.column2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 0;
+.button2 {
+    background-color: rgb(79, 76, 74);
+    color: white;
+    border-radius: 3rem;
+    text-decoration: none;
+    padding: 5px;
+    margin: 20px;
+    font-size: 25px;
+    box-shadow: 2px 2px 2px;
 }
 
-.form-item.column2 input[type="radio"] {
-
-    margin-right: 0.5rem;
+.trip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: gray;
 }
 
-.form-item.column2 label {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+.trip-columns {
+    background-color: white;
+    border: 10px solid black;
+    padding: 0;
+    text-align: center;
+    max-width: 400px;
+
+}
+    
+.table1 {
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the table with auto margins */
+    border-collapse: collapse; /* Collapse borders */
+    background-color: #ffffff; /* Optional: background color for the table */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow for depth */
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
-.form-item.column1 label {
-    margin-bottom: 1rem;
+.table1 th, .table1 td {
+    border: 1px solid #ccc; /* Add border to table cells */
+    padding: 10px; /* Add padding to cells */
+    text-align: left;
+}
+
+.table-wrapper {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px; /* Add some padding around the table */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin: 20px auto; /* Center the wrapper with margin */
+    width: 80%;
+}
+
+.contact{
+    background-color: gray;
 }
